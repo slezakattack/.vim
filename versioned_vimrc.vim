@@ -34,7 +34,7 @@ syntax enable "enable syntax
 
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
-set background=light
+set background=dark
 colorscheme solarized
 
 set t_Co=256
@@ -149,3 +149,10 @@ set wildignore=*.o,*~,*.pyc,*.swp,*.bak,*.swo,*.ho,*.hi,*.beam "ignore compiled 
 nnoremap <C-h> :bprevious<cr>
 nnoremap <C-l> :bnext<cr>
 nnoremap ,q :bp\|bd #<cr>
+
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
+au BufRead,BufNewFile *.tml set syntax=html
+au BufRead,BufNewFile *.hb set syntax=html
