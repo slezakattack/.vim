@@ -35,7 +35,7 @@ syntax enable "enable syntax
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 set background=dark
-colorscheme solarized
+colorscheme wombat256
 
 set t_Co=256
 
@@ -156,3 +156,4 @@ map <ScrollWheelDown> <C-E>
 
 au BufRead,BufNewFile *.tml set syntax=html
 au BufRead,BufNewFile *.hb set syntax=html
+au BufRead,BufNewFile *.erl,*.es,*.hrl setf erlang
