@@ -87,15 +87,16 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 
-NeoBundle 'Lokaltog/vim-powerline'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'scrooloose/syntastic'
-
 NeoBundle 'Shougo/unite.vim'
-
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'preservim/nerdcommenter'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'vim-syntastic/syntastic'
 NeoBundle 'sudo.vim'
+
+"NeoBundle 'vim-erlang/vim-erlang-tags'
+"NeoBundle 'vim-erlang-runtime'
 
 let bundle = neobundle#get('unite.vim')
 
@@ -117,9 +118,8 @@ NeoBundleCheck
      \ 'file': '\v\.(exe|so|dll|txt|vert|frag|swf|png|jpg|gif|otf|wotf|eot|svg|ttf|pem|patch|pickle|psd|xpi|xrf|xsf|xsl|zip|tga|swp|swo|hi|o|p_o|p_hi)$'
      \ }
 
-"POWERLINE
-set laststatus=2
-set encoding=utf-8
+" AIRLINE
+let g:airline_theme='wombat'
 
 "NERDCOMMENTER
 let mapleader = ","
@@ -139,7 +139,6 @@ endif
 "put vim in interactive mode
 set shellcmdflag=-ic
 
-
 ""ETC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nobackup "dont create .swo
@@ -157,3 +156,7 @@ map <ScrollWheelDown> <C-E>
 au BufRead,BufNewFile *.tml set syntax=html
 au BufRead,BufNewFile *.hb set syntax=html
 au BufRead,BufNewFile *.erl,*.es,*.hrl setf erlang
+
+""highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+""match OverLength /\%81v.\+/
+set colorcolumn=100
