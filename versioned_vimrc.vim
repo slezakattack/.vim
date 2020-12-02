@@ -87,6 +87,12 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 
+"NOTE: Sent PR to upstream but temporarily will use own fork
+"NeoBundle 'vim-erlang/vim-erlang-tags'
+NeoBundle 'slezakattack/vim-erlang-tags'
+NeoBundle 'vim-erlang/vim-erlang-runtime'
+NeoBundle 'vim-erlang/vim-erlang-compiler'
+
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
@@ -95,8 +101,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'vim-syntastic/syntastic'
 NeoBundle 'sudo.vim'
 
-"NeoBundle 'vim-erlang/vim-erlang-tags'
-"NeoBundle 'vim-erlang-runtime'
+NeoBundle 'tpope/vim-fugitive'
 
 let bundle = neobundle#get('unite.vim')
 
@@ -156,6 +161,7 @@ map <ScrollWheelDown> <C-E>
 au BufRead,BufNewFile *.tml set syntax=html
 au BufRead,BufNewFile *.hb set syntax=html
 au BufRead,BufNewFile *.erl,*.es,*.hrl setf erlang
+"au BufRead,BufNewFile * nested tab sball
 
 ""highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 ""match OverLength /\%81v.\+/
