@@ -142,7 +142,7 @@ if executable('ack-grep')
 endif
 
 "put vim in interactive mode
-set shellcmdflag=-ic
+set shell=/bin/zsh
 
 ""ETC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
